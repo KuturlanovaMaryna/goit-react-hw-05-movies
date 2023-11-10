@@ -29,11 +29,12 @@ code {
   border-radius: 10px;
   display: inline-flex;
   border: 1px solid black;
+  transition: all 0.3s;
 
 }
 .nav-link.active{
   color: white;
-    background-color: black;
+  background-color: black;
  
   text-decoration: underline;
 }
