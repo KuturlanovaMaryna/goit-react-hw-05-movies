@@ -4,14 +4,14 @@ export const App = () => {
   return (
     <div>
       <nav>
-        <NavLink>Home</NavLink>
-        <NavLink>Movies</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/movies">Movies</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<div>Home page</div>} />
+        <Route path="/movies" element={<div>Movies page</div>} />
+        <Route path="/movies/:movieID" element={<div>Movie</div>} />
       </Routes>
     </div>
   );
 };
-
-// const API_KEY = 'b5c5f92c171eddbfa17290cd377a7ee0';
