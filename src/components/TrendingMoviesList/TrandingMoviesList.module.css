@@ -18,6 +18,7 @@
     color: black;
     text-decoration: none;
     padding-top: 10px;
+    margin-left: 30px;
     
 }
 
@@ -25,9 +26,11 @@
     color: rgb(234, 216, 249);
 }
 .moviesRaiting{
+    width: 40px;
     text-align: start;
     border-radius: 50%;
     background-color: white;
     padding: 10px;
     margin: 0;
+    text-align: center;
 }
