@@ -1,0 +1,33 @@
+.moviesList{
+    list-style: none;
+    padding: 0;
+}
+
+.moviesItem{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    
+   
+}
+
+.moviesLink{
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    
+}
+
+.moviesLink:hover{
+    color: rgb(234, 216, 249);
+}
+.moviesRaiting{
+    text-align: start;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+}

@@ -7,17 +7,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(94, 84, 103,0.5);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+main{
+  padding-left: 40px;
+}
 
 .header{
   border-bottom: 1px solid rgb(0, 0, 0, 0.5);
-  padding-bottom: 20px;
+  padding: 20px;
+
   box-shadow: 4px 4px 4px rgb(108, 114, 111, 0.5);
+  background-color: rgb(94, 84, 103);
 }
 .nav-link{
   text-decoration: none;
