@@ -12,6 +12,7 @@ const TrendingMoviesList = ({ films }) => {
       {films.map(film => (
         <li className={css.moviesItem} key={film.id}>
           <p className={css.moviesRaiting}>{film.vote_average}</p>
+
           <Link
             to={`/movies/${film.id}`}
             state={{ from: location }}

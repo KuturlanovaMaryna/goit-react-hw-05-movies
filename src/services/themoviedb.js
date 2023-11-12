@@ -15,7 +15,7 @@ export const fetchMovieByName = async (value) => {
 }
 
 export const fetchMovieDetails = async (movieId) => {
-    const response = await axios.get(`${BASE_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`) 
+    const response = await axios.get(`${BASE_URL}movie/${movieId}?api_key=${API_KEY}`) 
     return response.data;
 }
 

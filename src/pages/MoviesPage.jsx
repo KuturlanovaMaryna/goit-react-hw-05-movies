@@ -26,14 +26,14 @@ const MoviesPage = () => {
   };
 
   return (
-    <section>
+    <main>
       <Form onSubmit={SearchMovies} />
       {loading && <Loader />}
       {noMovies && (
         <p>There is no movies with this request. Please, try again</p>
       )}
       {searchFilms && <TrendingMoviesList films={searchFilms} />}
-    </section>
+    </main>
   );
 };
 
