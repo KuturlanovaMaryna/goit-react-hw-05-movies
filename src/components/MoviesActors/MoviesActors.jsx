@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchMovieActors } from 'services/themoviedb';
 import Loader from 'components/Loader/Loader';
+import css from './MoviesActors.module.css';
 
 const MoviesActors = () => {
   const { movieId } = useParams();
@@ -28,14 +29,15 @@ const MoviesActors = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.actorsContainer}>
       {loading && <Loader />}
 
-      <ul>
+      <ul className={css.actorsList}>
         {actors.map(({ id, profile_path, original_name, name, character }) => (
-          <li key={id}>
+          <li key={id} className={css.actorContainer}>
             <img
               width="200px"
+              height="300px"
               src={
                 profile_path
                   ? `https://image.tmdb.org/t/p/w500${profile_path}`

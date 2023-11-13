@@ -1,0 +1,49 @@
+.btnGB{
+    margin: 20px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 4px 4px 4px rgb(108, 114, 111, 0.5);
+}
+
+.btnGB:hover:focus{
+    background-color: rgb(94, 84, 103);
+}
+.container{
+    display: flex;
+    gap:20px
+    
+}
+.poster{
+    padding-bottom: 20px ;
+    padding-left: 20px;
+}
+.addInfoContainer{
+    padding-left: 20px;
+}
+.addInfoList{
+    display: flex;
+   padding-left: 0;
+    gap: 20px;
+    list-style: none;
+}
+.addInfo{ 
+  
+    width: 60px;
+  
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    display: inline-flex;
+    border: 1px solid black;
+    transition: all 0.3s;
+    
+}

@@ -20,29 +20,9 @@ main{
 section{
     padding-left: 40px;
   }
-.header{
-  border-bottom: 1px solid rgb(0, 0, 0, 0.5);
-  padding: 20px;
-
-  box-shadow: 4px 4px 4px rgb(108, 114, 111, 0.5);
-  background-color: rgb(94, 84, 103);
-}
-.nav-link{
-  text-decoration: none;
-  color: black;
-  background-color: white;
-  font-size: 20px;
-  padding: 20px;
-  margin-right: 20px;
-  border-radius: 10px;
-  display: inline-flex;
-  border: 1px solid black;
-  transition: all 0.3s;
-
-}
-.nav-link.active{
+.active{
   color: white;
   background-color: black;
- 
+
   text-decoration: underline;
 }

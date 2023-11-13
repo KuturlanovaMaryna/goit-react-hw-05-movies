@@ -1,0 +1,14 @@
+.actorsList {
+    list-style: none;
+    display: flex;
+    gap:10px;
+    padding-left: 10px;
+    flex-wrap: wrap;
+}
+
+.actorsContainer{
+  width: 1000px;
+}
+.actorContainer{
+    width: 200px;
+}

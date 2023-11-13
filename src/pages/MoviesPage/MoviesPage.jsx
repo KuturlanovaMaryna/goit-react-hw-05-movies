@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Loader from '../components/Loader/Loader';
-import { fetchMovieByName } from '../services/themoviedb';
+import Loader from '../../components/Loader/Loader';
+import { fetchMovieByName } from '../../services/themoviedb';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import css from './MoviesPage.module.css';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,17 +45,18 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <form onSubmit={onFormSubmit}>
-        <label className="label">
+      <form onSubmit={onFormSubmit} className={css.form}>
+        <label className={css.label}>
           <input
             name="moviesName"
             type="text"
             autoComplete="off"
             autoFocus
             placeholder="Search movies"
+            className={css.input}
           />
         </label>
-        <button type="submit">
+        <button type="submit" className={css.btnSearch}>
           <span>Search</span>
         </button>
       </form>
@@ -63,12 +65,16 @@ const MoviesPage = () => {
         {error !== null && (
           <p>There is no movies with this request. Please, try again</p>
         )}
-        <ul>
+        <ul className={css.moviesSearchList}>
           {searchFilms !== 0 &&
             searchFilms.map(film => {
               return (
-                <li key={film.id}>
-                  <Link state={{ from: location }} to={`/movies/${film.id}`}>
+                <li key={film.id} className={css.moviesSearchItem}>
+                  <Link
+                    state={{ from: location }}
+                    to={`/movies/${film.id}`}
+                    className={css.moviesSearchLink}
+                  >
                     {film.title}
                   </Link>
                 </li>
