@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/themoviedb';
 import Loader from 'components/Loader/Loader';
@@ -10,6 +10,7 @@ const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
+  const backLink = useRef(location.state?.from || '/');
 
   useEffect(() => {
     const searchMovieDetails = () => {
@@ -45,7 +46,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={location.state?.from ?? '/'}>
+      <Link to={backLink.current}>
         <button type="button" className={css.btnGB}>
           Go back
         </button>
